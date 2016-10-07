@@ -1,0 +1,26 @@
+nav.bracketseffect {
+  a:before,
+  a:after {
+    opacity: 0;
+    display: inline-block;
+    transition: opacity .4s, transform .4s;
+  }
+  a:before {
+    content: "[";
+  }
+  a:after {
+    content: "]";
+  }
+  a:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+    &:before {
+      transform: translateX(-20px);
+    }
+    &:after {
+      transform: translateX(20px);
+    }
+  }
+}

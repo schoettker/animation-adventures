@@ -1,0 +1,34 @@
+li:hover > .drop-menu.menu-2 {
+  perspective: 900px;
+  li {
+    opacity: 0;
+    transform-origin: top center;
+    animation: {
+      name: style2;
+      fill-mode: forwards;
+      timing-function: ease-in-out;
+    }
+  }
+  @for $i from 1 through 6 {
+    li:nth-child(#{$i}){
+      // animation-delay: ($i - 1) * .3s;
+      animation-delay: (150ms * $i) - 300;
+      animation-duration:  .3s;
+    }
+  }
+}
+
+@keyframes style2 {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  60% {
+    transform: rotateX(50deg);
+  }
+  100% {
+    opacity: .9;
+    transform: rotateX(0deg); 
+
+  }
+}

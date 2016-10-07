@@ -1,0 +1,73 @@
+ nav{
+  ul {
+    list-style-type: none;
+    text-align:center;
+    padding-left: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 2em;
+    color: darkslategray;
+    font-size:18px;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: darkslategray;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+
+.dropdowneffect > ul > li {
+  margin: 0;
+  padding: 1em;
+  display:inline-block;
+  width: 150px;
+  position: relative;
+  z-index: 2;
+  background: coral;
+  &:first-child {
+    border-top-left-radius: 3px;
+  }
+  &:last-child {
+    border-top-right-radius: 3px;
+  }
+  &:hover .drop-menu li {
+    display: block;
+  }
+}
+ul.drop-menu {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+  li { 
+    opacity: .9;
+    margin: 0;
+    width: 150px;
+    display: none;
+    background: coral;
+    &:last-child {
+      border-bottom-radius: 3px;
+    }
+    &:first-child {
+      margin-top: 1em;
+    }
+  }
+  a {
+    color: white;
+    display: block;
+    padding: 1em;
+    width: 100%;
+    &:hover {
+      background: darken(coral, 20%);
+    }
+  }
+}
+

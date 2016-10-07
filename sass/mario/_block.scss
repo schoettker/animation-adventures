@@ -1,0 +1,14 @@
+.block {
+  width: 50px;
+  margin-bottom: 90px;
+  height: 50px;
+  background-image: url("../assets/block.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  transition: background-size 0s 250ms, background-image 0s 250ms;
+}
+.supermario:hover .block {
+  background-image: url("../assets/emptyblock.png"); 
+  background-size: 40px;
+}

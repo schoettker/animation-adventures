@@ -1,0 +1,38 @@
+#shroom {
+  width: 45px;
+  height: 45px;
+  z-index: -1;
+  position: absolute;
+  transition: z-index 0s 490ms  ,transform .6s 250ms; 
+  overflow: hidden;
+}
+.supermario:hover #shroom {
+  transform: translateY(-40px);
+  z-index: 0;
+  animation: {
+    name: move;
+    duration: 4s;
+    delay: 550ms;
+    fill-mode: forwards;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-40px);
+  }
+  20% {
+    transform: translateX(45px) translateY(-40px); 
+  }
+  40% {
+    transform: translateX(65px) translateY(165px);
+  }
+  50% {
+    transform: translateY(165px) translateX(65px);
+  }
+  100% {
+    transform: translateY(165px) translateX(600px);
+    opacity: 0;
+  }
+}
+

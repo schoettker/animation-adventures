@@ -1,0 +1,30 @@
+li:hover > .drop-menu.menu-1 {
+  perspective: 900px;
+  li {
+    opacity: 0;
+    animation: {
+      name: style1;
+      fill-mode: forwards;
+      timing-function: ease-in-out;
+    }
+  }
+  @for $i from 1 through 6 {
+    li:nth-child(#{$i}){
+      // animation-delay: ($i - 1) * .3s;
+      animation-delay: (150ms * $i) - 300;
+      animation-duration:  .3s;
+    }
+  }
+}
+
+@keyframes style1 {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotateY(-90deg);
+  }
+  100% {
+    opacity: .9;
+    transform: translateY(0px) rotateY(0deg); // one can actually omit this if the transforms are meant to go back to normal 
+
+  }
+}

@@ -1,0 +1,42 @@
+.circle {
+  margin: 2em auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 9px solid coral;
+  position: relative;
+}
+.path {
+  // background: coral;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+}
+@for $i from 1 through 8 {
+  .path:nth-child(#{$i}){
+    transform: rotate(45deg * $i);
+  }
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  border-radius: 50%;
+  background: darkslategray;
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(227px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}

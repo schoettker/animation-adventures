@@ -1,0 +1,22 @@
+.card {
+  margin: 1em auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: url("https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400");
+  &:hover .desc {
+    height: 30%; 
+  }
+}
+.desc {
+  position: absolute;
+  bottom: 0;
+  background: #2196F3;
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  opacity: .8;
+  height: 15%;
+  transition: .3s height cubic-bezier(0.77, 0, 0.175, 1); 
+}

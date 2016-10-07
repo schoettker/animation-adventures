@@ -1,0 +1,31 @@
+.mario {
+  margin-top: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+#supermario {
+  width: 60px;
+}
+.supermario {
+  display: inline-block;
+}
+.supermario:hover #supermario{
+  animation: {
+    name: jump;
+    duration: .5s;
+    timing-function: ease-in;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
